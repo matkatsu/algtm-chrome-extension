@@ -5,3 +5,10 @@
   background-color: #ccc;
   border: 1px solid #ccc;
 }
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}

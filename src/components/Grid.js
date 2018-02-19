@@ -10,8 +10,8 @@ const Grid = props => {
     );
   });
   return (
-    <div className="grid">
-      <ul>{listItems}</ul>
+    <div>
+      <ul className="grid">{listItems}</ul>
     </div>
   );
 };
