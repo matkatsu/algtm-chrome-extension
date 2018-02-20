@@ -11,4 +11,5 @@ ul {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
+  padding: 0%;
 }
