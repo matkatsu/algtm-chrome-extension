@@ -6,8 +6,8 @@
     "axios": "^0.17.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-s-alert": "^1.4.1",
     "react-scripts": "1.1.1",
-    "react-toastify": "^3.3.4",
     "react-tooltip": "^3.4.0"
   },
   "scripts": {

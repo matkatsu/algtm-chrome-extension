@@ -2,6 +2,7 @@ import * as React from "react";
 import Search from "./Search";
 import Grid from "./Grid";
 import axios from "axios";
+import Alert from "react-s-alert";
 
 const instance = axios.create({
   baseURL: "http://localhost:29903/api/",
@@ -55,6 +56,7 @@ class App extends React.Component {
           onKeyPress={e => this.handleKeyPress(e)}
         />
         <Grid list={this.state.list} />
+        <Alert stack={{ limit: 1 }} />
       </div>
     );
   }

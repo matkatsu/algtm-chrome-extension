@@ -1,7 +1,9 @@
 import * as React from "react";
 import ReactTooltip from "react-tooltip";
-import { ToastContainer, toast } from "react-toastify";
+import Alert from "react-s-alert";
 import "./Grid.css";
+import "react-s-alert/dist/s-alert-default.css";
+import "react-s-alert/dist/s-alert-css-effects/flip.css";
 
 const copyLgtm = (e, { word, url }) => {
   const text = `![${word}](${url})`;
@@ -19,8 +21,12 @@ const copyLgtm = (e, { word, url }) => {
   document.execCommand("copy");
   // 追加テキストエリアを削除
   bodyElm.removeChild(copyFrom);
-  // トースト表示
-  toast("クリップボードにコピーしました");
+  // toast
+  Alert.info("クリップボードにコピーしました", {
+    position: "top",
+    effect: "flip",
+    timeout: 1000
+  });
 };
 
 const Grid = props => {
@@ -47,12 +53,6 @@ const Grid = props => {
   });
   return (
     <div>
-      <ToastContainer
-        hideProgressBar={true}
-        autoClose={2000}
-        closeButton={false}
-        position="top-center"
-      />
       <ul className="grid">{listItems}</ul>
     </div>
   );
