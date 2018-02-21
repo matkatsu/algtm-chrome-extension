@@ -8,8 +8,6 @@ const instance = axios.create({
   timeout: 1000
 });
 
-// const handleClick = () => {};
-
 class App extends React.Component {
   constructor(props) {
     super(props);
