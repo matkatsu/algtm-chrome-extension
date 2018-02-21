@@ -1,5 +1,6 @@
 import * as React from "react";
 import ReactTooltip from "react-tooltip";
+import { ToastContainer, toast } from "react-toastify";
 import "./Grid.css";
 
 const copyLgtm = (e, { word, url }) => {
@@ -15,9 +16,11 @@ const copyLgtm = (e, { word, url }) => {
   // テキストエリアの値を選択
   copyFrom.select();
   // コピーコマンド発行
-  var retVal = document.execCommand("copy");
+  document.execCommand("copy");
   // 追加テキストエリアを削除
   bodyElm.removeChild(copyFrom);
+  // トースト表示
+  toast("クリップボードにコピーしました");
 };
 
 const Grid = props => {
@@ -34,7 +37,7 @@ const Grid = props => {
         <ReactTooltip
           id={String(item.id)}
           place="top"
-          type="dark"
+          type="light"
           effect="float"
         >
           <span>{item.word}</span>
@@ -44,6 +47,12 @@ const Grid = props => {
   });
   return (
     <div>
+      <ToastContainer
+        hideProgressBar={true}
+        autoClose={2000}
+        closeButton={false}
+        position="top-center"
+      />
       <ul className="grid">{listItems}</ul>
     </div>
   );
