@@ -5,7 +5,7 @@ import axios from "axios";
 import Alert from "react-s-alert";
 
 const instance = axios.create({
-  baseURL: "http://localhost:29903/api/",
+  baseURL: process.env.REACT_APP_AIKATSUP_API_BASE_URL,
   timeout: 1000
 });
 
@@ -18,6 +18,9 @@ class App extends React.Component {
     };
   }
   handleSubmit(e) {
+    if (!this.state.word) {
+      return;
+    }
     instance
       .get("/v1/search", {
         params: {
