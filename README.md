@@ -7,4 +7,4 @@ aikatsu lgtm chrome extension
 # install
 
 * download `algtm.crx` from [here](https://github.com/romiogaku/algtm-chrome-extension/releases)
-* drag and drop `algtm.crx` to [chrome://extensions/](chrome://extensions/)
+* drag and drop `algtm.crx` to `chrome://extensions`
