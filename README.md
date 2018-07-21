@@ -25,5 +25,7 @@ yarn build
 # AikatsuUP!
 
 this chrome extension uses AikatsuUP!(aikatsu capture database) API.
+
 [http://aikatsup.com/](http://aikatsup.com/)
+
 thanks [@sakura_metal](https://twitter.com/sakura_metal)!
